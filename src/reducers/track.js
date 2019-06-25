@@ -22,6 +22,7 @@ export default function(state = initialState, action) {
       return resetTracks(state);
     case actionTypes.SET_CURRENT_TAGS:
       return setCurrentTags(state, action);
+    default:
   }
   return state;
 }

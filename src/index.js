@@ -11,6 +11,11 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import reducers from './reducers';
 
+import SC from 'soundcloud';
+import { CLIENT_ID, REDIRECT_URI } from './constants/authConstant';
+
+SC.initialize({ client_id: CLIENT_ID, redirect_uri: REDIRECT_URI });
+
 const createStoreWithMiddleware = compose(
   applyMiddleware(thunk, logger),
   window.devToolsExtension ? window.devToolsExtension() : f => f

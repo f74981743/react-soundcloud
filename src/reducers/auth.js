@@ -6,6 +6,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.ME_SET:
       return setMe(state, action);
+    default:
   }
   return state;
 }

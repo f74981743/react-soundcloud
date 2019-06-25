@@ -16,6 +16,6 @@ export default function playlist(state = initialState, action) {
 function setPlayList(state, action) {
 	const { songs } = action;
 	return Object.assign({}, state, {
-		songs: action.songs
+		songs
 	})
 }
