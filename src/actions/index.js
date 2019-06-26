@@ -64,31 +64,6 @@ export function setMuted(isMuted) {
   }
 }
 
-export function auth() {
-  return function (dispatch) {
-    SC.connect().then((session) => {
-        dispatch(fetchStream(session));
-    });
-  };
-};
-
-function setMe(user) {
-  return {
-    type: types.ME_SET,
-    user
-  };
-}
-
-function fetchMe(session) {
-  return function (dispatch) {
-    fetch(`//api.soundcloud.com/me?oauth_token=${session.oauth_token}`)
-      .then((response) => response.json())
-      .then((data) => {
-          dispatch(setMe(data));
-      });
-  }
-};
-
 export function fetchAllTracks(tags, isResetTrack, keyword) {
   return function (dispatch, getState) {
     const { track } = getState();

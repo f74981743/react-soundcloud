@@ -1,10 +1,10 @@
 import React from 'react';
-import MainPanel from './containers/MainPanel';
+import TracksBoard from './containers/TracksBoard';
 
 function App() {
   return (
     <div className="App">
-      <MainPanel />
+      <TracksBoard />
     </div>
   );
 }
