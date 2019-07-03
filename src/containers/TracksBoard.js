@@ -6,6 +6,7 @@ import { getImageUrl } from '../utils/utils';
 import { IMAGE_SIZES } from '../constants/songConstant';
 import classNames from 'classnames';
 import * as Actions from '../actions';
+import './TracksBoard.css';
 
 const TracksBoard = () => {
   const player = useSelector(state => state.player);
@@ -18,7 +19,7 @@ const TracksBoard = () => {
   const loadingCls = classNames({
     'loading': true,
     hide: isFetching === false
-  });
+  });;
 
   const handlePlay = (track) => {
     if (track !== activeTrack) {
